@@ -1,0 +1,267 @@
+{
+	"info": {
+		"_postman_id": "c4b2009b-82d4-437b-b74f-95f7e6f8146c",
+		"name": "TP1",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Supprimer une observation specifique",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:5000/observations/jg978",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"observations",
+						"jg978"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Obtenir les observations d'une station",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:5000/observations/KY226",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"observations",
+						"KY226"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Obtenir les observations d'une station inexistante",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:5000/observations/KY224",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"observations",
+						"KY224"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Obtenir une observations en particulier",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:5000/observations/XL908/5f83545d6b41c2364c098b0c",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"observations",
+						"XL908",
+						"5f83545d6b41c2364c098b0c"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Obtenir une observations en particulier, mauvais id",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:5000/observations/XL908/5f83545d6b41c2364c098b0a",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"observations",
+						"XL908",
+						"5f83545d6b41c2364c098b0a"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Obtenir une observations en particulier, mauvaise station",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:5000/observations/KY226/5f83545d6b41c2364c098b0c",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"observations",
+						"KY226",
+						"5f83545d6b41c2364c098b0c"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Obtenir une observations en particulier en changeant l'unite",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:5000/observations/XL908/5f83545d6b41c2364c098b0c?unit=s",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"observations",
+						"XL908",
+						"5f83545d6b41c2364c098b0c"
+					],
+					"query": [
+						{
+							"key": "unit",
+							"value": "s"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Obtenir une observations en particulier en changeant l'unite, mauvaise unité",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:5000/observations/XL908/5f83545d6b41c2364c098b0c?unit=s",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"observations",
+						"XL908",
+						"5f83545d6b41c2364c098b0c"
+					],
+					"query": [
+						{
+							"key": "unit",
+							"value": "s"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Obtenir les observations d'une station en changeant unité",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:5000/observations/KY226?unit=f",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"observations",
+						"KY226"
+					],
+					"query": [
+						{
+							"key": "unit",
+							"value": "f"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Obtenir les observations d'une station en changeant à une mauvaise unité",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:5000/observations/KY226?unit=a",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"observations",
+						"KY226"
+					],
+					"query": [
+						{
+							"key": "unit",
+							"value": "a"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Ajouter une observation météo",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"location\": {\r\n      \"station\": \"XL908\",\r\n      \"coord\": {\r\n        \"lon\": -122.08,\r\n        \"lat\": 37.39\r\n      }\r\n    },\r\n    \"temperature\": 20,\r\n    \"pressure\": 1022,\r\n    \"humidity\": 0.76,\r\n    \"feelslike\": 23,\r\n    \"uvIndex\": 8,\r\n    \"wind\": {\r\n      \"speed\": 23,\r\n      \"degree\": 224\r\n    },\r\n    \"clouds\": {\r\n      \"cloudcover\": 0.34\r\n    },\r\n    \"hexMatrix\": [ \"0xA2\", \"0xC4\", \"0xE2\", \"0x12\", \"0xB6\" ]\r\n\r\n  }",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:5000/observations",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"observations"
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"protocolProfileBehavior": {}
+}

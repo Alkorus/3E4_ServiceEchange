@@ -1,0 +1,453 @@
+{
+	"info": {
+		"_postman_id": "8846e640-88c1-4a73-be31-e5ee63bf867a",
+		"name": "TP3",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "GetAll Pizzerias",
+			"item": [
+				{
+					"name": "Obtenir toutes les pizzerias avec spécialité avec page",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:7187/pizzerias?speciality=Kiwi&page=2",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "7187",
+							"path": [
+								"pizzerias"
+							],
+							"query": [
+								{
+									"key": "speciality",
+									"value": "Kiwi"
+								},
+								{
+									"key": "page",
+									"value": "2"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Obtenir toutes les pizzerias avec spécialité",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:7187/pizzerias?speciality=Anchovies",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "7187",
+							"path": [
+								"pizzerias"
+							],
+							"query": [
+								{
+									"key": "speciality",
+									"value": "Anchovies"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Obtenir toutes les pizzerias 1re page",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:7187/pizzerias",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "7187",
+							"path": [
+								"pizzerias"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Obtenir toutes les pizzerias derniere page",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:7187/pizzerias?page=50",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "7187",
+							"path": [
+								"pizzerias"
+							],
+							"query": [
+								{
+									"key": "page",
+									"value": "50"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Obtenir toutes les pizzerias avec spécialité absente",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:7187/pizzerias?speciality=Uranium",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "7187",
+							"path": [
+								"pizzerias"
+							],
+							"query": [
+								{
+									"key": "speciality",
+									"value": "Uranium"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Obtenir toutes les pizzerias sur une certaine page",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:7187/pizzerias?limit=32&page=5",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "7187",
+							"path": [
+								"pizzerias"
+							],
+							"query": [
+								{
+									"key": "limit",
+									"value": "32"
+								},
+								{
+									"key": "page",
+									"value": "5"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Obtenir toutes les pizzerias sur une certaine page passée maximum",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:7187/pizzerias?limit=32&page=50",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "7187",
+							"path": [
+								"pizzerias"
+							],
+							"query": [
+								{
+									"key": "limit",
+									"value": "32"
+								},
+								{
+									"key": "page",
+									"value": "50"
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			],
+			"protocolProfileBehavior": {}
+		},
+		{
+			"name": "Post Customer",
+			"item": [
+				{
+					"name": "Ajouter un client",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n   \"coord\":{\r\n      \"lat\":-645.39,\r\n      \"lon\":884.925\r\n   },\r\n   \"name\":\"Dennis Mooneyhan\",\r\n   \"planet\":\"Pualia\",\r\n   \"referalCode\":\"koonaihiM9\",\r\n   \"email\":\"3DennisNMooneyhan@einrot.com\",\r\n   \"phone\":\"0123456789ABCDEF\",\r\n   \"birthday\":\"1935-06-14\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:7187/customers",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "7187",
+							"path": [
+								"customers"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Ajouter un client sans body",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n   \"coord\":{\r\n      \"lat\":-645.39,\r\n      \"lon\":884.925\r\n   },\r\n   \"name\":\"Dennis Mooneyhan\",\r\n   \"planet\":\"Pualia\",\r\n   \"referalCode\":\"koonaihiM9\",\r\n   \"email\":\"3DennisNMooneyhan@einrot.com\",\r\n   \"phone\":\"0123456789ABCDEF\",\r\n   \"birthday\":\"1935-06-14\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:7187/customers?_body=false",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "7187",
+							"path": [
+								"customers"
+							],
+							"query": [
+								{
+									"key": "_body",
+									"value": "false"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Ajouter un client existant",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n   \"coord\":{\r\n      \"lat\":-645.39,\r\n      \"lon\":884.925\r\n   },\r\n   \"name\":\"Dennis Mooneyhan\",\r\n   \"planet\":\"Pualia\",\r\n   \"referalCode\":\"koonaihiM9\",\r\n   \"email\":\"2DennisNMooneyhan@einrot.com\",\r\n   \"phone\":\"0123456789ABCDEF\",\r\n   \"birthday\":\"1935-06-14\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:7187/customers",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "7187",
+							"path": [
+								"customers"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Ajouter un client vide",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:7187/customers",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "7187",
+							"path": [
+								"customers"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Obtenir tous les clients de la planète Pualia",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "http://localhost:7187/customers?planet=Pualia",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "7187",
+							"path": [
+								"customers"
+							],
+							"query": [
+								{
+									"key": "planet",
+									"value": "Pualia"
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			],
+			"protocolProfileBehavior": {}
+		},
+		{
+			"name": "GetOne Order",
+			"item": [
+				{
+					"name": "Obtenir une commande spécifique",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:7187/pizzerias/5fc125a21633312494c41cbd/orders/5fca96b5c2fe6d551c03a1b8",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "7187",
+							"path": [
+								"pizzerias",
+								"5fc125a21633312494c41cbd",
+								"orders",
+								"5fca96b5c2fe6d551c03a1b8"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Obtenir une commande spécifique inexistante",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:7187/pizzerias/5fc125a21633312494c41cbd/orders/aaaa96b5c2fe6d551c03a1b8",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "7187",
+							"path": [
+								"pizzerias",
+								"5fc125a21633312494c41cbd",
+								"orders",
+								"aaaa96b5c2fe6d551c03a1b8"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Obtenir une commande spécifique de la mauvaise pizzeria",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:7187/pizzerias/5fc125a21633312494c41cba/orders/5fca96b5c2fe6d551c03a1b8",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "7187",
+							"path": [
+								"pizzerias",
+								"5fc125a21633312494c41cba",
+								"orders",
+								"5fca96b5c2fe6d551c03a1b8"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Obtenir une commande avec le client inclus",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:7187/pizzerias/5fc125a21633312494c41cbd/orders/5fca96b5c2fe6d551c03a1b8?embed=customer",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "7187",
+							"path": [
+								"pizzerias",
+								"5fc125a21633312494c41cbd",
+								"orders",
+								"5fca96b5c2fe6d551c03a1b8"
+							],
+							"query": [
+								{
+									"key": "embed",
+									"value": "customer"
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			],
+			"protocolProfileBehavior": {}
+		}
+	],
+	"protocolProfileBehavior": {}
+}

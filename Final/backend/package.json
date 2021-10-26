@@ -1,0 +1,32 @@
+{
+  "name": "pizza.planet",
+  "version": "1.0.20",
+  "description": "Épreuve synthèse 420-3E4-JR - A2020",
+  "main": "server.js",
+  "type": "module",
+  "scripts": {
+    "generator": "node generator.js",
+    "start": "nodemon server.js --inspect"
+  },
+  "author": "Yannick Charron",
+  "license": "ISC",
+  "dependencies": {
+    "chalk": "^4.1.0",
+    "cors": "^2.8.5",
+    "dayjs": "^1.9.6",
+    "dotenv-flow": "^3.2.0",
+    "expres": "0.0.5",
+    "express": "^4.17.1",
+    "express-paginate": "^1.0.2",
+    "express-validator": "^6.6.1",
+    "faker": "^5.1.0",
+    "http-errors": "^1.8.0",
+    "mongoose": "^5.10.13",
+    "random": "^2.2.0",
+    "random-text-generator": "^3.1.0"
+  },
+  "devDependencies": {
+    "cross-env": "^7.0.2",
+    "nodemon": "^2.0.6"
+  }
+}

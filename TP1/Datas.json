@@ -1,0 +1,94 @@
+[
+  {
+    "location": {
+      "station": "XL908",
+      "coord": {
+        "lon": -122.08,
+        "lat": 37.39
+      }
+    },
+    "temperature": 22,
+    "pressure": 1016,
+    "humidity": 0.65,
+    "feelslike": 28,
+    "uvIndex": 5,
+    "wind": {
+      "speed": 5,
+      "degree": 15
+    },
+    "clouds": {
+      "cloudcover": 0.85
+    },
+    "hexMatrix": [ "0xA2", "0xC4", "0xE2", "0x12", "0xB6" ]
+
+  },
+  {
+    "location": {
+      "station": "KY226",
+      "coord": {
+        "lon": 33.98,
+        "lat": -122.08
+      }
+    },
+    "temperature": -80,
+    "pressure": 1030,
+    "humidity": 0.15,
+    "feelslike": -82,
+    "uvIndex": 3,
+    "wind": {
+      "speed": 42,
+      "degree": 355
+    },
+    "clouds": {
+      "cloudcover": 0.15
+    },
+    "hexMatrix": [ "0xC2", "0xCA", "0x15", "0xBA", "0x9D" ]
+
+  },
+  {
+    "location": {
+      "station": "JG978",
+      "coord": {
+        "lon": 91.56,
+        "lat": 31.55
+      }
+    },
+    "temperature": 70,
+    "pressure": 922,
+    "humidity": 0.53,
+    "feelslike": 72,
+    "uvIndex": 8,
+    "wind": {
+      "speed": 33,
+      "degree": 295
+    },
+    "clouds": {
+      "cloudcover": 0.30
+    },
+    "hexMatrix": [ "0xCE", "0x75", "0xB0", "0x6A", "0x7C" ]
+
+  },
+  {
+    "location": {
+      "station": "AL364",
+      "coord": {
+        "lon": 952.22,
+        "lat": -364.25
+      }
+    },
+    "temperature": -60,
+    "pressure": 1195,
+    "humidity": 0.05,
+    "feelslike": -61,
+    "uvIndex": 10,
+    "wind": {
+      "speed": 15,
+      "degree": 270
+    },
+    "clouds": {
+      "cloudcover": 0.15
+    },
+    "hexMatrix": [ "0x77", "0xA5", "0xE1", "0x61", "0x85" ]
+
+  }
+]

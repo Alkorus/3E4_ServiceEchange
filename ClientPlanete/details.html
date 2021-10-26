@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- CSS only -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+        integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+    <link rel="stylesheet" href="css/style.css">
+
+    <!-- JS, Popper.js, and jQuery -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+        integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"
+        integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"
+        integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV"
+        crossorigin="anonymous"></script>
+
+    <!-- Notre fichier de scripts js-->
+    <script src="js/details.js"></script>
+
+    <!-- Bibliothèque Axios pour AJAX-->
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+
+    <title>Détails d'une planète</title>
+</head>
+
+<body>
+    <div class="container">
+        <h1>Détails de la planète</h1>
+        <div class="row">
+            <div class="col-9">
+                <div class="row">
+                    <div class="col-4">
+                        <img id="imgPlanet" class="iconPlanet" />
+                        <h2 id="lblName">Nom</h2>
+                    </div>
+                    <div class="col-8">
+                        <div class="row">
+                            <label for="lblDiscoveredBy" class="col-4">Découverte par:</label>
+                            <label id="lblDiscoveredBy" class="col-8"></label>
+                        </div>
+                        <div class="row">
+                            <label class="col-4" for="lblDiscoveryDate">Date de découverte:</label>
+                            <label class="col-8" id="lblDiscoveryDate"></label>
+                        </div>
+                        <div class="row">
+                            <label class="col-4" for="lblTemperature">Température:</label>
+                            <label class="col-8" id="lblTemperature"></label>
+                        </div>
+                        <div class="row">
+                            <label class="col-4" for="lblPosition">Position:</label>
+                            <label class="col-8" id="lblPosition"></label>
+                        </div>
+                        <div class="row">
+                            <div class="col-12">
+                                <button type="button" id="btnExtraction" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal">
+                                    Extraction
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-3">
+                <h3>Les satellites</h3>
+                <div class="row">
+                    <ul id="satellite"></ul>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <h3 class="col-12">Portals</h3>
+            <div class="col-8">
+                <table id="portals" class="table">
+                    <thead>
+                        <tr>
+                            <th scope="col">Position</th>
+                            <th scope="col">Affinity</th>
+                        </tr>
+                    </thead>
+                </table>
+            </div>
+            <div class="col-4">
+                <div class="form-group">
+                    <label for="exampleInputEmail1">Position</label>
+                    <input type="text" pattern="[A-Z]{1,2}[0-9]{1,3}" class="form-control" id="txtPortalPosition" />
+                </div>
+                <div class="form-group">
+                    <select class="form-control" id="cboAffinity">
+                        <option>air</option>
+                        <option>darkness</option>
+                        <option>earth</option>
+                        <option>energy</option>
+                        <option>fire</option>
+                        <option>life</option>
+                        <option>light</option>
+                        <option>logic</option>
+                        <option>music</option>
+                        <option>space</option>
+                        <option>toxic</option>
+                        <option>water</option>
+                    </select> 
+                </div> 
+                <button id="btnAjouterPortal" class="btn btn-primary">Ajouter le portal</button>
+            </div>
+        </div>
+    </div>
+</body>
+
+<!-- Modal trouvé sur : https://getbootstrap.com/docs/4.0/components/modal/-->
+<div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="exampleModalLabel">Extraction</h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body">
+            <table id="extraction" class="table">
+                <thead>
+                    <tr>
+                        <th scope="col">Element</th>
+                        <th scope="col">Quantity</th>
+                    </tr>
+                </thead>
+                <tbody id="tbody"></tbody>
+            </table>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+</html>

@@ -1,0 +1,141 @@
+{
+	"info": {
+		"_postman_id": "40b4e3a8-f397-4f6b-8f8b-a1767eccd1a6",
+		"name": "ESB - Sommatif",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Q1abd - Retrouver une équipe",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8526/teams/5fd255995243436794040b3d",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8526",
+					"path": [
+						"teams",
+						"5fd255995243436794040b3d"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Q1c - Erreur",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:8526/teams/5fd255985436794040b32",
+					"host": [
+						"localhost"
+					],
+					"port": "8526",
+					"path": [
+						"teams",
+						"5fd255985436794040b32"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Q1e - Paramètre d'URL player",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:8526/teams?player=Fuqn",
+					"host": [
+						"localhost"
+					],
+					"port": "8526",
+					"path": [
+						"teams"
+					],
+					"query": [
+						{
+							"key": "player",
+							"value": "Fuqn"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Q2ab - Pagination et transformation",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8526/games/?page=23&limit=20",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8526",
+					"path": [
+						"games",
+						""
+					],
+					"query": [
+						{
+							"key": "page",
+							"value": "23"
+						},
+						{
+							"key": "limit",
+							"value": "20"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Q2c - Victoire d'une équipe",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:8526/games/5fd255e6457bd15670fc4ddd",
+					"host": [
+						"localhost"
+					],
+					"port": "8526",
+					"path": [
+						"games",
+						"5fd255e6457bd15670fc4ddd"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Q2c - Partie nulle",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:8526/games/5fd255e6457bd15670fc4dda",
+					"host": [
+						"localhost"
+					],
+					"port": "8526",
+					"path": [
+						"games",
+						"5fd255e6457bd15670fc4dda"
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"protocolProfileBehavior": {}
+}

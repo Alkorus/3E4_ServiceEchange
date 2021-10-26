@@ -1,0 +1,11 @@
+#main, #details, #generate {
+    text-align: center;
+}
+.iconMonster {
+    width: 90px;
+    height: auto;
+}
+
+table td {
+    vertical-align: middle!important;
+}

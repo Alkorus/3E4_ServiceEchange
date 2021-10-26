@@ -1,0 +1,121 @@
+{
+	"info": {
+		"_postman_id": "b8325625-2950-4fe5-9b9a-eabce7ea5edc",
+		"name": "Formatif ESB",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Q1 - Retrieve One planet",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:5896/planets/5f1ef4071d2fd12580bf11b2",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5896",
+					"path": [
+						"planets",
+						"5f1ef4071d2fd12580bf11b2"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Q1a - Retrieve One planet",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:5896/planets/5f1ef4096d2fd12580bf11b2",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5896",
+					"path": [
+						"planets",
+						"5f1ef4096d2fd12580bf11b2"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Q1c - Retrieve One planet embed",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:5896/planets/5f1ef4071d2fd12580bf11c7?embed=observations",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5896",
+					"path": [
+						"planets",
+						"5f1ef4071d2fd12580bf11c7"
+					],
+					"query": [
+						{
+							"key": "embed",
+							"value": "observations"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Q2ac - Retrieve observations",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:5896/observations/",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5896",
+					"path": [
+						"observations",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Q2b - Retrieve observations humidity > 0.60",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:5896/observations?humidity=0.60",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5896",
+					"path": [
+						"observations"
+					],
+					"query": [
+						{
+							"key": "humidity",
+							"value": "0.60"
+						}
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"protocolProfileBehavior": {}
+}

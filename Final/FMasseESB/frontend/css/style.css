@@ -1,0 +1,30 @@
+#main, #details, #generate {
+    text-align: center;
+}
+.iconMonster {
+    width: 75px;
+    height: auto;
+}
+
+.green {
+    color: seagreen;
+    font-size: 18pt;
+    font-weight: bold;
+    
+}
+
+.red {
+    color: palevioletred;
+    font-weight: bold;
+    font-size: 18pt;
+    
+}
+
+.size18 {
+    font-size: 18pt;
+    font-weight: bold;
+}
+
+table td {
+    vertical-align: middle!important;
+}

@@ -1,0 +1,47 @@
+.iconPoukamon{
+    width: 75px;
+    height: auto;
+}
+
+.imagePoukamon{
+    width: 150px;
+    height: auto;
+}
+
+.iconDetails{
+    width: 30px;
+    height: auto;
+}
+
+.iconKernel{
+    width: 45px;
+    height: auto;
+}
+
+.presentation{
+    text-align: center;
+    margin-top: 20px;
+}
+
+.btnDetails{
+    background-color: green;
+    color: white;
+    border-width: 0px;
+    border-radius: 5px;
+    margin: 3px;
+}
+
+.tableau{
+    vertical-align: auto;
+}
+
+.colored-hash .block{
+    letter-spacing: -8px;
+    display: inline-block;
+    width: 8px;
+    height: 14px;
+    overflow: hidden;
+    padding: 0;
+    line-height: 1;
+}
+

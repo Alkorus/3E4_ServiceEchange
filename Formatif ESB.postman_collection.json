@@ -1,0 +1,104 @@
+{
+	"info": {
+		"_postman_id": "2bcc8df4-e3ab-478a-8e25-9a4a5ad5c8f6",
+		"name": "GetOne Order",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Obtenir une commande spécifique",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:7187/pizzerias/5fc125a21633312494c41cbd/orders/5fca96b5c2fe6d551c03a1b8",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "7187",
+					"path": [
+						"pizzerias",
+						"5fc125a21633312494c41cbd",
+						"orders",
+						"5fca96b5c2fe6d551c03a1b8"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Obtenir une commande spécifique inexistante",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:7187/pizzerias/5fc125a21633312494c41cbd/orders/aaaa96b5c2fe6d551c03a1b8",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "7187",
+					"path": [
+						"pizzerias",
+						"5fc125a21633312494c41cbd",
+						"orders",
+						"aaaa96b5c2fe6d551c03a1b8"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Obtenir une commande spécifique de la mauvaise pizzeria",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:7187/pizzerias/5fc125a21633312494c41cba/orders/5fca96b5c2fe6d551c03a1b8",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "7187",
+					"path": [
+						"pizzerias",
+						"5fc125a21633312494c41cba",
+						"orders",
+						"5fca96b5c2fe6d551c03a1b8"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Obtenir une commande avec le client inclus",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:7187/pizzerias/5fc125a21633312494c41cbd/orders/5fca96b5c2fe6d551c03a1b8?embed=customer",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "7187",
+					"path": [
+						"pizzerias",
+						"5fc125a21633312494c41cbd",
+						"orders",
+						"5fca96b5c2fe6d551c03a1b8"
+					],
+					"query": [
+						{
+							"key": "embed",
+							"value": "customer"
+						}
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"protocolProfileBehavior": {}
+}
